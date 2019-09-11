@@ -20,11 +20,6 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
 
-Style/Documentation:
-  Enabled: false
-Style/ClassAndModuleChildren:
-  Enabled: false
-
 Layout/AlignHash:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
