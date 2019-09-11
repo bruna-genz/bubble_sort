@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 def bubble_sort(arr)
-  loop {
+  loop do
     replace = false
     for i in 0...arr.length - 1
       if arr[i] > arr[i + 1]
@@ -7,22 +8,22 @@ def bubble_sort(arr)
         replace = true
       end
     end
-    break unless !replace
-  }
+    break unless replace
+  end
   arr
 end
 
 def bubble_sort_by(arr)
-  loop {
-      replace = false
-      for i in 0...arr.length - 1
-        comparison = yield(arr[i], arr[i + 1])
-        if comparison.positive?
-          arr[i], arr[i + 1] = arr[i + 1], arr[i]
-          replace = true
-        end
+  loop do
+    replace = false
+    for i in 0...arr.length - 1
+    comparison = yield(arr[i], arr[i + 1])
+      if comparison.positive?
+        arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        replace = true
       end
-    break unless !replace
-  }
+    end
+    break unless replace
+  end
   arr
 end
